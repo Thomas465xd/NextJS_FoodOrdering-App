@@ -1,10 +1,10 @@
-## Frwnch Coffee - Food Ordering App
+# French Coffee - Food Ordering App
 
-Welcome to French Coffee, a modern food ordering app built with Next.js, Prisma, and Supabase. This application allows users to order delicious food items, while the admin can manage orders and mark them as completed.
+Welcome to French Coffee, a modern food ordering app built with **Next.js, Prisma, and Supabase**. This application allows users to order delicious food items, while the admin can manage orders and mark them as completed.
 
 ---
 
-🚀 Features
+## 🚀 Features
 
 📌 User Features
 
@@ -51,6 +51,7 @@ The app will be available at http://localhost:3000.
 
 📂 Project Structure
 
+```
 french-coffee/
 │── prisma/              # Prisma schema and migrations
 │── public/              # Static assets
@@ -63,6 +64,7 @@ french-coffee/
 │── .env.local           # Environment variables
 │── package.json         # Dependencies and scripts
 │── README.md            # Project documentation
+```
 
 Might Be Subject to Changes
 
