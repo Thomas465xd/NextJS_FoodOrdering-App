@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# French Coffee - Food Ordering App
 
-## Getting Started
+Welcome to French Coffee, a modern food ordering app built with **Next.js, Prisma, and Supabase**. This application allows users to order delicious food items, while the admin can manage orders and mark them as completed.
 
-First, run the development server:
+---
 
-```bash
+## 🚀 Features
+
+📌 User Features
+
+✅ Browse a variety of food items.
+✅ Place orders easily.
+✅ Upload an image while adding a new food item.
+✅ View order status updates in real-time.
+
+🔧 Admin Features
+
+✅ CRUD for Food Items (Create, Read, Update, Delete).
+✅ Order Management – View, process, and mark orders as completed.
+✅ Image Uploading for food items.
+
+
+---
+
+🛠️ Tech Stack
+
+Frontend: Next.js (App Router)
+
+Backend: Supabase (Database & Authentication)
+
+ORM: Prisma
+
+Storage: Supabase Storage (for images)
+
+
+
+---
+
+📦 Installation
+
+To Do...
+
+5️⃣ Start the development server
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+The app will be available at http://localhost:3000.
+
+
+---
+
+📂 Project Structure
+
+```
+french-coffee/
+│── prisma/              # Prisma schema and migrations
+│── public/              # Static assets
+│── src/
+│   ├── app/             # Next.js App Router pages
+│   ├── components/      # UI components
+│   ├── hooks/           # Custom hooks
+│   ├── lib/             # Utilities and API calls
+│   ├── styles/          # Global styles
+│── .env.local           # Environment variables
+│── package.json         # Dependencies and scripts
+│── README.md            # Project documentation
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Might Be Subject to Changes
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+📌 Usage
 
-## Learn More
+🛒 Placing an Order (Client)
 
-To learn more about Next.js, take a look at the following resources:
+1️⃣ Browse food items.
+2️⃣ Select an item and add it to the cart.
+3️⃣ Submit the order.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🎯 Managing Orders (Admin)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1️⃣ View all incoming orders.
+2️⃣ Process orders and update their status.
+3️⃣ Mark completed orders.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🔥 Future Enhancements
+
+🔹 Real-time order tracking using Supabase subscriptions.
+🔹 Payment integration with Stripe.
+🔹 User authentication for personalized experiences.
+
+
+---
+
+🤝 Contributing
+
+Feel free to contribute by submitting a pull request or opening an issue!
+
+
+---
+
+📜 License
+
+MIT License © 2025 French Coffee.
+
+
+---
+
+🚀 French Coffee – Enjoy the best coffee & food! ☕🍽️
+
+---
+
+**Made with ♥️ Thomas Schrödinger**
