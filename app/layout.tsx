@@ -22,7 +22,7 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
     return (
         <html lang="en">
         <body
-            className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-100`}
+            className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-100 overflow-y-hidden h-screen`}
         >
             {children}
         </body>
