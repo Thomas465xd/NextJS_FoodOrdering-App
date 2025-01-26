@@ -1,10 +1,10 @@
 export const categories = [
     {
-        slug: "coffee",
+        slug: "cafe",
         name: "Coffee"
     },
     {
-        slug: "burger",
+        slug: "hamburguesa",
         name: "Burgers"
     },
     {
@@ -12,15 +12,15 @@ export const categories = [
         name: "Pizzas"
     },
     {
-        slug: "donut",
+        slug: "dona",
         name: "Donuts"
     },
     {
-        slug: "cake",
+        slug: "pastel",
         name: "Cakes"
     },
     {
-        slug: "cookies",
+        slug: "galletas",
         name: "Cookies"
     }
 ]
