@@ -8,17 +8,19 @@ export default async function AdminLayout({
 }>) {
     return (
         <>
-            <div className="md:flex">
-                <aside className="md:w-72 md:h-screen bg-white">
+            <div className="md:flex min-h-screen">
+                {/* Sidebar with Fixed Position on Small Screens */}
+                <aside className="md:w-72 bg-white md:sticky md:top-0 md:h-screen">
                     <AdminSidebar />
                 </aside>
 
-                <main className="md:flex-1 md:h-screen md:overflow-y-scroll bg-gray-100 p-5">
+                {/* Main Content */}
+                <main className="flex-1 h-screen overflow-y-scroll bg-gray-100 p-5 pb-96 md:pb-5">
                     {children}
                 </main>
             </div>
 
             <ToastNotification />
         </>
-    )
+    );
 }
