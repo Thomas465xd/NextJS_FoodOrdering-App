@@ -25,7 +25,7 @@ export default async function OrderPage({params} : { params: { category: string}
                 Choose and add products to <span className="text-purple-800 font-bold">your order</span>
             </Heading>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-4 items-start overflow-y-auto h-screen mb-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 items-start overflow-y-auto h-screen mb-10">
                 {products.map((product) => (
                     <ProductCard
                         key={product.id}
