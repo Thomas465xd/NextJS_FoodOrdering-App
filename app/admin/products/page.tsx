@@ -50,7 +50,9 @@ export default async function ProductsPage({searchParams} : {searchParams: {page
 
     return (
         <>
-            <Heading>Manage Your Products</Heading>
+            <div className="text-center lg:text-left">
+                <Heading>Manage Your Products</Heading>
+            </div>
 
             <div className="flex flex-col lg:flex-row items-center justify-between gap-5 border-b pb-5">
                 <Link

@@ -1,11 +1,12 @@
 "use client";
+import { getImagePath } from "@/src/utils";
 import { CldUploadWidget } from "next-cloudinary";
 import Image from "next/image";
 import { useState } from "react";
 import { TbPhotoPlus } from "react-icons/tb";
 import { toast } from "react-toastify";
 
-export default function ImageUpload() {
+export default function ImageUpload({image} : {image: string | undefined}) {
 
     const [imageURL, setImageURL] = useState("");
 
@@ -44,6 +45,7 @@ export default function ImageUpload() {
                                 <div className="absolute inset-0 w-full h-full">
                                     <Image
                                         fill
+                                        sizes="100%"
                                         style={{ objectFit: "contain" }}
                                         src={imageURL}
                                         alt="Uploaded Product Image"
@@ -53,10 +55,25 @@ export default function ImageUpload() {
                         </div>
                     </div>
 
+                    {image && !imageURL &&  (
+                        <div className="space-y-2">
+                            <label className="text-slate-800 font-bold">Current Product Image</label>
+                            <div className="relative w-64 h-64 mx-auto">
+                                <Image
+                                    fill
+                                    sizes="100%"
+                                    style={{ objectFit: "contain" }}
+                                    src={getImagePath(image)}
+                                    alt="Current Product Image"
+                                />
+                            </div>
+                        </div>
+                    )}
+
                     <input
                         type="hidden" 
                         name="image" 
-                        value={imageURL}
+                        defaultValue={imageURL ? imageURL : image}
                     />
                 </>
             )}
