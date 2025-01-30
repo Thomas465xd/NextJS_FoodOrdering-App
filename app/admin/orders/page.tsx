@@ -4,6 +4,7 @@ import OrderCard from "@/components/order/OrderCard";
 import Heading from "@/components/ui/Heading";
 import { OrderWithProducts } from "@/src/types";
 import Loader from "@/components/ui/Loader";
+import Footer from "@/components/ui/Footer";
 /*
 import { prisma } from "@/src/lib/prisma";
 import { revalidatePath } from "next/cache";
@@ -20,7 +21,7 @@ export default function OrdersPage() {
     const url = "/admin/orders/api";
     const fetcher = (url: string) => fetch(url).then(res => res.json()).then(data => data);
 
-    const { data, error, isLoading } = useSWR<OrderWithProducts[]>(url, fetcher, {
+    const { data, isLoading } = useSWR<OrderWithProducts[]>(url, fetcher, {
         refreshInterval: 60000,
         revalidateOnFocus: false
     })
@@ -38,37 +39,41 @@ export default function OrdersPage() {
     */
 
     if(data) return (
-        <>
-            <Heading>
-                Manage your <span className="text-purple-800 font-bold">Client Orders</span>
-            </Heading>
+        <div className="flex flex-col min-h-screen">
+            <main className="flex-1 p-5">
+                <Heading>
+                    Manage your <span className="text-purple-800 font-bold">Client Orders</span>
+                </Heading>
 
-            {/*}
-            <form 
-                action={refreshOrders}
-                className="border-b pb-5"
-            >
+                {/*}
+                <form 
+                    action={refreshOrders}
+                    className="border-b pb-5"
+                >
 
-                <input 
-                    type="submit" 
-                    value={"Update Orders"} 
-                    className="bg-amber-400 text-xl text-center font-bold px-6 py-3 rounded shadow-md 
-                            ring-1 ring-gray-300 hover:bg-amber-500 transition-all 
-                            w-full max-w-xs lg:w-auto"
-                />
-            </form>
-            {*/}
+                    <input 
+                        type="submit" 
+                        value={"Update Orders"} 
+                        className="bg-amber-400 text-xl text-center font-bold px-6 py-3 rounded shadow-md 
+                                ring-1 ring-gray-300 hover:bg-amber-500 transition-all 
+                                w-full max-w-xs lg:w-auto"
+                    />
+                </form>
+                {*/}
 
-            {data.length ? (
-                <div className="grid grid-cols-1 lg:grid-cols-2 wxl:grid-cols-3 gap-5 mt-5">
-                    {data.map(order => (
-                        <OrderCard
-                            key={order.id} 
-                            order={order}
-                        />
-                    ))}
-                </div>
-            ) : <p className=""></p> }
-        </>
-    )
+                {data.length ? (
+                    <div className="grid grid-cols-1 lg:grid-cols-2 wxl:grid-cols-3 gap-5 mt-5">
+                        {data.map(order => (
+                            <OrderCard
+                                key={order.id} 
+                                order={order}
+                            />
+                        ))}
+                    </div>
+                ) : <p className="text-center text-gray-500 mt-10">No orders available.</p> }
+            </main>
+
+            <Footer />
+        </div>
+    );
 }

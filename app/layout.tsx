@@ -27,14 +27,13 @@ export const metadata: Metadata = {
         "React",
         "Tailwind CSS"
     ],
+    metadataBase: new URL("https://yourdomain.com"), // 🔹 Set your production domain here
     authors: [{ name: "Thomas Schrödinger", url: "https://yourwebsite.com" }],
     creator: "Your Name",
     publisher: "Thomas Freelancer",
     robots: "index, follow",
     icons: {
         icon: "/logo.svg",
-        apple: "/apple-touch-icon.png",
-        shortcut: "/favicon.ico"
     },
     openGraph: {
         title: "Food Order App - Next.js, Prisma & App Router",
@@ -45,12 +44,18 @@ export const metadata: Metadata = {
         locale: "en_US",
         images: [
             {
-                url: "/og-image.jpg",
+                url: "/logo.svg",
                 width: 1200,
                 height: 630,
                 alt: "Food Order App - Order meals online",
             },
         ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Food Order App",
+        description: "Order your favorite meals quickly and easily!",
+        images: ["/logo.svg"], // Same as Open Graph image
     },
 };
 
