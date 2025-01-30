@@ -1,5 +1,4 @@
 "use client"
-import { createProduct } from "@/actions/create-product-action";
 import { editProduct } from "@/actions/edit-product-action";
 import { ProductSchema } from "@/src/schema";
 import { useParams, useRouter } from "next/navigation";
